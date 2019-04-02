@@ -1,0 +1,48 @@
+<HTML>
+<head>
+    <script type="text/javascript">
+    function validation()
+        {
+            if(myform.id.value == 7 ||myForm.destination.value=="" || document.myForm.client.value == 0 || document.myForm.livreur.value == 0 || document.myForm.localisation.value=="" )
+                {
+                    alert("Verifier les champs");
+                    return false;
+                }
+            else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+<form method="POST" action="ajoutLivraison.php" name="myForm" onsubmit="return validation()" >
+<table>
+<caption>Ajouter livraison</caption>
+<tr>
+<td>ID</td>
+<td><input type="number" name="id"></td>
+</tr>
+<tr>
+<td>Destination</td>
+<td><input type="text" name="destination"></td>
+</tr>
+<tr>
+<td>Client</td>
+<td><input type="number" name="client"></td>
+</tr>
+<tr>
+<td>Livreur</td>
+<td><input type="number" name="livreur"></td>
+</tr>
+<tr>
+<td>Localisation</td>
+<td><input type="text" name="localisation"></td>
+</tr>
+<tr>
+<td></td>
+<td><input type="submit" name="ajouter" value="ajouter"></td>
+</tr>
+</table>
+</form>
+</body>
+</HTML>
